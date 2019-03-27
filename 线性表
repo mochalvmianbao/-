@@ -1,0 +1,51 @@
+## 删除值在x-y之间的所有元素
+
+
+void delete(Seqlist *A,int x,int y)
+{
+i=0;
+n=0;
+while (i<A->last)
+{
+if (A->data[i]>=x && A->data[i]<=y) 
+else A->data[i-n]=A->data[i]i++;
+}
+A->last-=n
+}
+
+
+##顺序存储，整体替换
+void process(Seqlist *L,int m,int n) 
+{if(m<=n)
+ for(i=1;i<=m;i++)
+{x=L->data[0];
+for(k=1;k<=L->last;k++)
+L->data[k-1]=L->data[k];
+L->data[L->last]=x;
+}else for(i=1;i<=n;i++)
+{x=L->data[L->last];
+for(k=L->last-1;k>=0;k- -)
+L->data[k+1]=L->data[k];
+L->data[0]=x;
+}
+
+
+
+## 链表合并
+LinkList Combine(LinkList A, Lin
+{C=A;rc=C;
+pa=A->next;
+pb=B->next;
+free(B);
+while (pa && pb)
+if(pa->data<pb->data)
+{rc->next=pa;
+rc=pa;
+pa=pa->next;}
+else
+{rc->next=pb;rc=pb;pb=pb->next;}
+if(pa)
+rc->next=pa;
+else rc->next=pb; 
+return(C)
+
